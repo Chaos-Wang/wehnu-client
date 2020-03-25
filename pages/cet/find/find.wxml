@@ -1,0 +1,44 @@
+<w-confirm id="wuss-confirm" />
+<w-alert id="wuss-alert" />
+<w-form
+ bind:onSubmit="wussFormSubmit"
+ bind:onReset="wussFormReset"
+ isValidateBtn
+>
+	<w-cell-group>
+  		<w-validate rules="{{ userNameRules }}">
+			<w-input
+			 name="userName"
+			 placeholder="请输入你的姓名"
+			 clear
+			 label="姓名"
+			/>
+		</w-validate>
+
+		<w-validate firstValidate rules="{{ isRequired }}">
+			<w-cell-picker
+			 label="四级/六级"
+			 title="请选择准考证类别"
+			 placeholder="请选择准考证类别"
+			 options="{{ [['四级','六级']] }}"
+			 name="type"
+			 bind:onOpen="handlePickerOpen"
+			 bind:onCancel="handlePickerCancel"
+			/>
+		</w-validate>
+    <view style='display: flex;flex-direction: row;justify-content: center;'>
+		<w-cell >
+			<w-button
+			 inline
+			 type="info"
+			 formType="submit"
+			>
+				提交
+			</w-button>
+		</w-cell>
+    </view>
+	</w-cell-group>
+</w-form>
+
+<w-confirm id="wuss-confirm" />
+<w-alert id="wuss-alert" />

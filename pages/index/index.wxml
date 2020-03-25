@@ -1,0 +1,33 @@
+<!--pages/index/index.wxml-->
+<w-notice
+	text="版本v1.0.1可能还有些许问题，如果遇到显示不正常，请点击个人中心-教务信息管理中的刷新教务信息，或联系QQ：1549346071获取帮助"
+/>
+
+  <swiper class="activity" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="155"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+<w-pane title="主要功能" desc="Functions" />
+
+
+<view class="container">  
+  <view class="weui-grids">  
+    <view class="weui-grid" wx:for="{{routers}}" wx:key="name">  
+      <navigator url="{{item.url}}">  
+        <view class="weui-grid__icon">  
+          <image src=" {{item.icon}}" mode="scaleToFill" />  
+        </view>  
+        <text class="weui-grid__label">{{item.name}}</text>  
+      </navigator>  
+    </view>  
+  </view>  
+</view>  
+
+<w-alert id="wuss-alert" />
+<w-confirm id="wuss-confirm" />
+<w-loading id="wuss-loading" />

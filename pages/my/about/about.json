@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+      "w-accordion": "../../../wuss/w-accordion/index",
+      "w-card": "../../../wuss/w-card/index",
+      "w-pane": "../../../wuss/w-pane/index"
+        
+  }
+}

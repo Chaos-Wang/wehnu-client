@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "绑定",
+  "usingComponents": {
+    "w-loading": "../../wuss/w-loading/index",
+    "w-alert": "../../wuss/w-alert/index",
+    "w-button": "../../wuss/w-button/index"
+        
+    }
+    
+}

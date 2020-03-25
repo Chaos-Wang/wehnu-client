@@ -1,0 +1,17 @@
+<!--pages/me/me.wxml-->
+<view class='father_bg'>
+    <view class='buju' style="border-left: 2px;">
+    <label>
+      <image 
+            class='userTx' 
+            src="{{logged ? userInfo.avatarUrl : './logins.png'}}"
+      ></image>
+      <button open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'></button>
+    </label>
+   
+    <view>
+      <text wx:if="{{!logged}}" class='usernameDe}} '>点击登陆</text>
+      <text class='username' wx:else>{{userInfo.nickName}}</text>
+    </view>
+    </view>
+</view>

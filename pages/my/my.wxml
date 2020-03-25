@@ -1,0 +1,94 @@
+<w-notice
+	text="版本v1.0.1可能还有些许问题，如遇显示不正常，请点击教务信息管理中的刷新教务信息，或联系 QQ：1549346071 获取帮助"
+/>
+<view class="container">
+  <view class="user-info-box">
+    <block wx:if="{{detail}}">
+      <view class="user-info">
+        <view class="info-hd">
+          <image class="user-avatar" src="{{avatarUrl}}"></image>
+          <view class="user-title">
+            <text class="user-name">{{detail_info.xm}}</text>
+            <text class="user-id">{{detail_info.yxmc}}</text>
+          </view>
+          <view class="time-box">
+            <text class="time-term">{{detail_info.term}}</text>
+            <text class="time-now">第{{detail_info.zc}}周 </text>
+          </view>
+        </view>
+        <view class="info-bd" >
+          <view class="info-bd-left">
+            <text class="user-text">学号：{{detail_info.xh}}</text>
+            <text class="user-text">专业：{{detail_info.zymc}}</text>
+          </view>
+          <view class="info-bd-right">
+            <text class="user-text">年级：{{detail_info.rxnf}}级</text>
+            <text class="user-text">班级：{{detail_info.bj}}班</text>
+          </view>
+        </view>
+      </view>
+      
+    </block>
+
+    <navigator url="/pages/login/login" class="user-info" wx:else>
+      <view class="info-hd">
+        <image class="user-avatar" src="{{avatarUrl}}"></image>
+        <view class="user-title">
+          <text class="user-name">{{nickName}}</text>
+          <text class="user-id">未绑定</text>
+        </view>
+        <text class="bind-btn">前往绑定</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="more-list">
+      <navigator url="./version/version" class="issue-link">
+      <view class="more-btn">
+        <w-icon type="question-o" size='45'/> 
+        <text decode="{{true}}" class="btn-text">&nbsp;&nbsp;版本信息</text>
+      </view>
+    </navigator>
+
+    <navigator url="./about/about" class="about-link">
+      <view class="more-btn">
+        <w-icon type="phone-o" size='45'/> 
+        <text decode="{{true}}" class="btn-text">&nbsp;&nbsp;联系我们</text>
+
+      </view>
+    </navigator>
+
+  </view>
+
+<w-button
+icon="edit"
+ iconColor="#ffffff"
+ type="info"
+ data-key="1"
+ bind:onClick="handleShow"
+>教务信息管理</w-button>
+
+<w-action-sheet wx:if="{{detail}}"
+ data-key="1"
+ visible="{{ visible1 }}"
+ options="{{ items2 }}"
+ bind:onChange="handleClick"
+ bind:onClose="handleClose"
+ bindtap="{{items.bindtap}}"
+/>
+
+<w-action-sheet wx:else style="padding-bottom:'100px'"
+ data-key="1"
+ visible="{{ visible1 }}"
+ options="{{ items1 }}"
+ bind:onChange="handleClick"
+ bind:onClose="handleClose"
+ bindtap="{{items.bindtap}}"
+/>
+
+<w-loading id="wuss-loading" />
+<w-alert id="wuss-alert" />
+</view>

@@ -1,0 +1,82 @@
+<view class='header'>
+  <view class='layout-row layout-center-start'>
+    <view class="shift layout-row layout-space-around-center">
+      <!-- <sc-button fab size="small" style='margin:10rpx' bindtap='answer'>
+        <i class="iconfont icon-question" style="color: red"></i>
+      </sc-button> -->
+      <view class='text-caption layout-row layout-center'>
+        <button class="" plain="true" size='mini' style='background:#52b2f7;color:white;border-color:#52b2f7'>
+          {{xn}}{{xqs[xq]}}
+        </button>
+      </view>
+      <picker value="{{week}}" range="{{weeks}}" bindchange='changeweek' wx:if="{{week}}">
+        <view class='text-caption layout-row layout-center'>
+          <button class="" plain="true" size='mini' style='background:#52b2f7;color:white;border-color:#52b2f7'>
+            第{{week}}周
+          </button>
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+<scroll-view class="box" scroll-x="true" scroll-y="true">
+  <view class="top">
+    <view class="title" wx:if="{{month}}">{{month}}月</view>
+    <block wx:for="{{headers}}" wx:key="{{index}}">
+      <view class="time">
+        <view class="day">周{{item.day}}</view>
+        <view class="date" wx:if="{{item.date}}">{{item.date}}日</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='main-card'>
+
+  <view class="col title">
+      <view wx:for="{{classes}}" style="flex:{{item.num}};"  class="row title layout-column layout-center">
+        <view> {{item.time}}</view>
+      </view>
+    </view>
+
+    <view class="col title">
+      <view wx:for="{{times}}" class="row title layout-column layout-center">
+        <view class='text-overline' style='color:gray'> {{item.time}}</view>
+        <view> {{item.num}}</view>
+        <view class='text-overline' style='color:gray'> {{item.end}}</view>
+      </view>
+    </view>
+
+    <view wx:for="{{schedules}}" wx:for-item="items" class='col layout-column layout-start-center'>
+      <view wx:for="{{items}}" wx:for-item="list" style="flex:{{list.num}};" class='layout-column layout-start-center'>
+        
+        <block wx:if="{{list.cls[0].bool_week}}">
+          <block wx:for="{{list.cls}}">
+            <view wx:if="{{list.cls.length != 0}}" class='info-card {{item.color}} layout-column layout-space-around-start' style='height:{{(list.num+1)*110}}rpx;width:120rpx;margin:2rpx;border-radius:5rpx;flex:2;order:1;overflow:hidden;word-wrap:break-word;' bindtap='handleClick' data-tapitem='{{item.cls}}'>
+              <view class='info-card-name'>{{item.cls.kcmc}} ({{item.cls.jsxm}})</view>
+              <view wx:if="{{item.cls.jsmc}}">@{{item.cls.jsmc}}</view>
+              <view>{{item.cls.orgin}}</view>
+            </view>
+            <view wx:else class='info-card gray' style='height:{{(list.num+1)*110}}rpx;width:120rpx;margin:2rpx;border-radius:5rpx;display:flex;flex:1;order:2;flex-direction:column;font-size:7pt;overflow:hidden;'>
+            </view>
+          </block>
+        </block>
+
+        <block wx:else>
+           <block wx:for="{{list.cls}}">
+            <view wx:if="{{list.cls.length != 0}}" class='info-card gray layout-column layout-space-around-start' style='height:{{(list.num+1)*110}}rpx;width:120rpx;margin:2rpx;border-radius:5rpx;flex:2;order:1;overflow:hidden;word-wrap:break-word;' bindtap='handleClick' data-tapitem='{{item.cls}}'>
+              <view class='info-card-name'>{{item.cls.kcmc}} ({{item.cls.jsxm}})</view>
+              <view wx:if="{{item.cls.jsmc}}">@[非本周]{{item.cls.jsmc}}</view>
+              <view>{{item.cls.orgin}}</view>
+            </view>
+            <view wx:else class='info-card gray' style='height:{{(list.num+1)*110}}rpx;width:120rpx;margin:2rpx;border-radius:5rpx;display:flex;flex:1;order:2;flex-direction:column;font-size:7pt;overflow:hidden;'>
+            </view>
+          </block>
+        </block>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+<w-alert id="wuss-alert" />
+<w-confirm id="wuss-confirm" />

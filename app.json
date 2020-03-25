@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/author/author",
+    "pages/timetable/timetable",
+    "pages/login/login",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/achievement/achievement",
+    "pages/cet/cet",
+    "pages/cet/find/find",
+    "pages/my/about/about",
+    "pages/my/version/version"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#52b2f7",
+    "navigationBarTitleText": "WeHNU",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index/home.png",
+        "selectedIconPath": "images/index/home@active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "images/index/person.png",
+        "selectedIconPath": "images/index/person@active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

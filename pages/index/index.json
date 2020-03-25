@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "w-alert": "../../wuss/w-alert/index",
+    "w-confirm": "../../wuss/w-confirm/index",
+    "w-loading": "../../wuss/w-loading/index",
+    "w-notice": "../../wuss/w-notice/index",
+    "w-pane": "../../wuss/w-pane/index"
+      
+  }
+}

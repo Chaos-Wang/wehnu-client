@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "w-pane": "../../wuss/w-pane/index",
+    "w-button": "../../wuss/w-button/index",
+    "w-action-sheet": "../../wuss/w-action-sheet/index",
+    "w-icon": "../../wuss/w-icon/index",
+    "w-loading": "../../wuss/w-loading/index",
+    "w-alert": "../../wuss/w-alert/index",
+    "w-notice": "../../wuss/w-notice/index"
+}
+}

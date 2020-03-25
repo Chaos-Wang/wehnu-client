@@ -1,0 +1,21 @@
+{
+  "usingComponents": {
+    "w-cell": "../../../wuss/w-cell/index",
+    "w-cell-group": "../../../wuss/w-cell-group/index",
+    "w-input": "../../../wuss/w-input/index",
+    "w-checkbox": "../../../wuss/w-checkbox/index",
+    "w-button": "../../../wuss/w-button/index",
+    "w-form": "../../../wuss/w-form/index",
+    "w-switch": "../../../wuss/w-switch/index",
+    "w-radio": "../../../wuss/w-radio/index",
+    "w-date-picker": "../../../wuss/w-date-picker/index",
+    "w-address-picker": "../../../wuss/w-address-picker/index",
+    "w-cell-picker": "../../../wuss/w-cell-picker/index",
+    "w-number": "../../../wuss/w-number/index",
+    "w-vcode": "../../../wuss/w-vcode/index",
+    "w-validate": "../../../wuss/w-validate/index",
+    "w-pane": "../../../wuss/w-pane/index",
+    "w-confirm": "../../../wuss/w-confirm/index",
+    "w-alert": "../../../wuss/w-alert/index"
+  }
+}

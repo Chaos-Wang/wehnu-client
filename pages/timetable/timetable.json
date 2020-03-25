@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#52b2f7",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "课表",
+  "usingComponents": {
+      "w-alert": "../../wuss/w-alert/index" ,
+      "w-confirm": "../../wuss/w-confirm/index",
+      "w-loading": "../../wuss/w-loading/index"
+          
+      
+  },
+  "enablePullDownRefresh": false
+}

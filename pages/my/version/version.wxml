@@ -1,0 +1,13 @@
+<w-pane title="版本信息" desc="Version Info" />
+
+<w-card
+ title="V 1.0.0"
+ content="实现功能：课表，成绩，四六级准考证存储"
+ footer="TodoList：\r\n  考试查询，\r\n  四六级一键查询，\r\n  成绩分析，\r\n 拼车,\r\n 文件共享，\r\n  代码重构"
+/>
+<text decode="{{true}}">&nbsp;</text>
+<w-card
+ title="V 1.0.1"
+ content="不完全修复登陆逻辑中的一个BUG，现在课表可以自动切换到本周了"
+ footer="TodoList：\r\n  考试查询，\r\n  四六级一键查询，\r\n  成绩分析，\r\n 拼车,\r\n 文件共享，\r\n  代码重构"
+/>

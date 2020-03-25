@@ -1,0 +1,23 @@
+<w-pane title="联系我们" desc="Contect us" />
+
+<w-card
+ title="微信公众号"
+ content="关注我们的公众号 南有东西（bin_fon），给我们留言，我们将尽快解决您的问题"
+/>
+<text decode="{{true}}">&nbsp;</text>
+<w-card
+ title="Github"
+ content="给 Github账户 https://github.com/Chaos-Wang 发送私信或提交Issue，我们将尽快解决您的问题"
+/>
+<text decode="{{true}}">&nbsp;</text>
+<w-card
+ title="QQ"
+ content="联系QQ：1549346071 留言，我们将尽快解决您的问题"
+/>
+
+<text decode="{{true}}">&nbsp;</text>
+<w-card
+ title="博客"
+ content="在我的博客 https://chaoswang.cn 任意文章下留言，我们将尽快解决您的问题"
+/>
+<text decode="{{true}}">&nbsp;</text>
